@@ -1,0 +1,191 @@
+body {
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(122,216,226,1) 75%);
+    margin: 20px;
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+
+  #booking-form {
+    width: 500px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 35px;
+    max-width: 400px;
+    background-color: rgba(255, 255, 255, 0.71);
+    border: 1px solid rgba(209, 213, 219, 0.3);
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px) saturate(100%);
+    -webkit-backdrop-filter: blur(5px) saturate(100%);
+  }
+
+  #parking-lot {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    max-width: 500px;
+    margin: auto;
+    width: 50%;
+    border: 3px solid rgb(0, 0, 0);
+    padding: 10px;
+  }
+  
+  #parking-lot img {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .parking-slot {
+    width: 100px;
+    height: 100px;
+    background-color: #EDEDED;
+    border: 2px solid #CCCCCC;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 18px;
+  
+  }
+  
+  .slot-number {
+    text-align: center;
+  }
+  
+
+  .empty {
+    background-color: #66BB6A;
+    color: #FFFFFF;
+  
+  }
+  
+  .booked {
+    background-color: #EF5350;
+    color: #FFFFFF;
+  }
+  
+  #log-out {
+     position: absolute;
+     top: 10px;
+     right: 10px;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 1px;
+    cursor: pointer;
+    text-align: center;
+  }
+
+  #logout{
+    appearance: none;
+  background-color: transparent;
+  border: 2px solid #1A1A1A;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: #3B3B3B;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+  min-height: 60px;
+  min-width: 0;
+  outline: none;
+  padding: 16px 24px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 100%;
+  will-change: transform;
+  }
+
+  #logout:disabled {
+    pointer-events: none;
+  }
+  
+  #logout:hover {
+    color: #fff;
+    background-color: #1A1A1A;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+  }
+  #logout:active {
+    box-shadow: none;
+    transform: translateY(0);
+  }
+
+  #booking-status {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+  }
+  
+  label {
+    font-weight: bold;
+    font-size: 18px;
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid gray;
+  }
+
+  #slot-select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  
+  button[type="button"] {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: blue;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  #parking-status {
+    text-align: center;
+    font-size: 18px;
+    margin: 20px 0;
+    background-color: #F2F2F2;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  #parking-status p {
+    display: inline-block;
+    margin: 0 10px;
+    font-weight: bold;
+  }
+  
+  #empty-slots {
+    color: green;
+  }
+  
+  #full-slots {
+    color: red;
+  }
+  

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Slotbooking</title>
+  <link rel="stylesheet" type="text/css" href="css/slot.css">
+  <!-- <script>
+    let s1=true;
+    let s2=true;
+    let s3=true;
+    document.getElementById('slot1')[0].className="booked";
+    // const boxes = document.getElementById("slot1");
+    // boxes[0].classList.add("booked");
+    // boxes[0].classList.remove("empty");
+      // if(s1){
+      //   
+      // }
+      // else
+      //   element.className= "booked";   
+  </script> -->
+</head>
+<body>
+  <script type="text/javascript" src="js/slot.js"></script>
+  <h1>BOOK YOUR SLOT!</h1>
+  <div id="log-out">
+    <button type="button" id="logout" class="form-control-submit-button">Log Out</button>
+  </div>
+
+  <div id="parking-lot">
+    <div id="slot1" class="parking-slot empty">
+      <span class="slot-number">SLOT 1</span>
+    </div>
+    <div class="parking-slot booked">
+      <span class="slot-number">SLOT 2</span>
+    </div>
+    <div class="parking-slot empty">
+      <span class="slot-number">SLOT 3</span>
+    </div>
+    <!-- Add more slots as needed 
+      <img src="images/parking-lot.jpg" alt="Parking Lot"> -->
+  </div>
+  
+  <div id="parking-status">
+    <p>Total Slots: <span id="empty-slots">3</span></p>
+    <p>Empty Slots: <span id="empty-slots">3</span></p>
+    <p>Slots Filled: <span id="full-slots">0</span></p>
+  </div>
+
+  <div id="booking-form">
+    <form>
+      <label>Select Parking Slot:</label>
+      <select id="slot-select">
+        <option value="1">Slot 1</option>
+        <option value="2">Slot 2</option>
+        <option value="3">Slot 3</option>
+      </select><br><br>
+      <label>Vehicle Type (BIKE/CAR):</label>
+      <input type="text" id="name"><br><br>
+      <label>Vehicle Number:</label>
+      <input type="text" id="no"><br><br>
+      <button type="button" onclick="bookSlot()">Book Slot</button>
+    </form>
+  </div>
+  
+  <div id="booking-status"></div>
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-analytics.js";
+    import { getAuth, signOut } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-auth.js";
+    import { getDatabase,set,ref } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-database.js";
+  
+    const firebaseConfig = {
+      apiKey: "AIzaSyDxynSlYp7N35IkF7UN7jUu9_cVrSkta1Q",
+      authDomain: "smart-parking-project-csd.firebaseapp.com",
+      databaseURL: "https://smart-parking-project-csd-default-rtdb.firebaseio.com",
+      projectId: "smart-parking-project-csd",
+      storageBucket: "smart-parking-project-csd.appspot.com",
+      messagingSenderId: "718930764898",
+      appId: "1:718930764898:web:df69f45af2890859e35d3b",
+      measurementId: "G-Y0CF6N4JNW"
+    };
+    const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+        const auth = getAuth();
+        const database = getDatabase(app);
+    logout.addEventListener('click',(e)=>{
+    signOut(auth).then(() => {
+    alert('User Logged Out');
+    window.location.href = "index.html";
+    }).catch((error) => {
+    // An error happened.
+    alert(error);
+    });
+  })
+
+  </script>
+</body>
+</html>
